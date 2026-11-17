@@ -1,0 +1,26 @@
+SCHRIFTEN (einmalig, ca. 5 Minuten)
+
+Die Website nutzt die Schriften "Cinzel" und "Alegreya Sans". Aus Datenschutzgründen
+werden sie NICHT von Google geladen, sondern von deiner eigenen Seite. Bis die Dateien
+hier liegen, zeigt die Seite Ersatzschriften (Georgia / Systemschrift). Alles funktioniert,
+sieht nur etwas anders aus.
+
+So bekommst du die Dateien:
+1. Öffne https://gwfh.mranftl.com/fonts (Google Webfonts Helper) oder lade die Schriften
+   von https://fonts.google.com herunter (beide Schriften sind frei nutzbar, Open Font License).
+2. Wähle jeweils den Zeichensatz "latin" und das Format "woff2".
+3. Benenne die Dateien genau so und lege sie in diesen Ordner:
+
+   cinzel-latin-500-normal.woff2
+   cinzel-latin-600-normal.woff2
+   cinzel-latin-700-normal.woff2
+   cinzel-latin-800-normal.woff2
+   cinzel-latin-900-normal.woff2
+   alegreya-sans-latin-400-normal.woff2
+   alegreya-sans-latin-500-normal.woff2
+   alegreya-sans-latin-700-normal.woff2
+   alegreya-sans-latin-800-normal.woff2
+   alegreya-sans-latin-400-italic.woff2
+
+Alternative: Mit Node.js "npm i @fontsource/cinzel @fontsource/alegreya-sans" installieren;
+die Dateien mit genau diesen Namen liegen dann in node_modules/@fontsource/*/files/.
