@@ -1,6 +1,8 @@
-SCHRIFTEN (einmalig, ca. 5 Minuten)
+SCHRIFTEN
 
-Die Website nutzt die Schriften "Cinzel" und "Alegreya Sans". Aus Datenschutzgründen
+Die Schriften "Cinzel" und "Alegreya Sans" liegen als woff2-Dateien in diesem Ordner und werden
+aus Datenschutzgründen von der eigenen Seite geladen, nicht von Google. Die Dateinamen nicht ändern.
+Nur falls Dateien fehlen, siehe die folgende Anleitung (dann zeigt die Seite Ersatzschriften).
 werden sie NICHT von Google geladen, sondern von deiner eigenen Seite. Bis die Dateien
 hier liegen, zeigt die Seite Ersatzschriften (Georgia / Systemschrift). Alles funktioniert,
 sieht nur etwas anders aus.

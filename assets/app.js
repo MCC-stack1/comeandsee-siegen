@@ -15,9 +15,9 @@
   var I18N = {
     de: {
       locale: 'de-DE',
-      nav: [['about', 'Über uns'], ['sunday', 'Sonntag'], ['events', 'Termine'], ['gallery', 'Galerie'], ['faq', 'Fragen'], ['location', 'Anfahrt']],
+      nav: [['about', 'Über uns'], ['sunday', 'Sonntag'], ['events', 'Termine'], ['instagram', 'Instagram'], ['faq', 'Fragen'], ['location', 'Anfahrt'], ['press', 'Presse']],
       legal: [['Impressum', 'impressum.html'], ['Datenschutz', 'datenschutz.html']],
-      lang: { href: 'en/index.html', label: 'EN', title: 'Read this page in English', code: 'en' },
+      lang: { href: '../en/index.html', label: 'EN', title: 'Read this page in English', code: 'en' },
       artHero: 'St. Michael Siegen mit zwei Türmen, goldenes Kreuz mit Lichtschein und der Erzengel Michael mit Schwert',
       artChurch: 'Zeichnung der Kirche St. Michael in Siegen',
       brandSub: 'KATHOLISCH SIEGEN', brandAria: 'Come & See, zum Seitenanfang',
@@ -36,6 +36,13 @@
       evEyebrow: 'Termine & Ausflüge', evTitle: 'Was als Nächstes ansteht', evLead: 'Neben dem Treffen nach der Messe sind wir regelmäßig gemeinsam unterwegs.',
       evEmptyT: 'Neue Termine kommen über WhatsApp', evEmptyP: 'Aktuelle Treffen und Ausflüge kündigen wir in unserer WhatsApp-Community an. Tritt bei, dann verpasst du nichts.',
       evEmptyBtn: 'Zur Community', evDefault: 'Termin',
+      calOpen: 'Im Google Kalender öffnen', calSub: 'Kalender abonnieren', calLoading: 'Termine werden geladen …', calLoadingP: 'Einen Moment bitte.',
+      calAllDay: 'ganztägig', calUntil: 'bis', calClock: ' Uhr', calMore: 'Weitere Termine findest du in unserem Google Kalender.',
+      prEyebrow: 'Presse & Medien', prTitle: 'Das schreiben andere über uns', prLead: '', prNote: '', prRead: 'Weiterlesen',
+      igEyebrow: 'Instagram', igTitle: 'Unser Alltag auf Instagram',
+      igLead: 'Eindrücke aus unserer Gemeinschaft: von Sonntagen, Ausflügen und besonderen Momenten.',
+      igName: 'Come & See Siegen', igCardP: 'Folge uns, damit du nichts verpasst. Auf Instagram teilen wir Fotos und Neuigkeiten aus unserer Gemeinschaft.',
+      igProfileBtn: 'Profil auf Instagram öffnen', igAvatarAlt: 'Logo von Come & See Siegen', igPostAlt: 'Beitrag von Come & See auf Instagram', igPostOpen: 'Beitrag auf Instagram öffnen',
       galEyebrow: 'Galerie', galTitle: 'Eindrücke aus unserer Gemeinschaft', galLead: 'Momente von unseren Sonntagen, Ausflügen und gemeinsamen Aktionen.',
       galPh: ['Nach der Messe', 'Unterwegs', 'Im Glauben'], galSoon: 'Fotos folgen bald', galEnlarge: 'Foto vergrößern', galAlt: 'Foto von Come & See',
       joinEyebrow: 'Mach mit', joinTitle: 'Werde Teil der Community', joinLead: 'Scanne einen Code mit der Kamera deines Handys oder tippe auf den Button. Wir freuen uns auf dich.',
@@ -54,9 +61,9 @@
     },
     en: {
       locale: 'en-GB',
-      nav: [['about', 'About us'], ['sunday', 'Sunday'], ['events', 'Events'], ['gallery', 'Gallery'], ['faq', 'FAQ'], ['location', 'Directions']],
+      nav: [['about', 'About us'], ['sunday', 'Sunday'], ['events', 'Events'], ['instagram', 'Instagram'], ['faq', 'FAQ'], ['location', 'Directions'], ['press', 'Press']],
       legal: [['Legal notice', 'legal-notice.html'], ['Privacy policy', 'privacy-policy.html']],
-      lang: { href: '../index.html', label: 'DE', title: 'Diese Seite auf Deutsch lesen', code: 'de' },
+      lang: { href: '../de/index.html', label: 'DE', title: 'Diese Seite auf Deutsch lesen', code: 'de' },
       artHero: 'St. Michael’s Church in Siegen with two towers, a golden cross with rays of light and the Archangel Michael with a sword',
       artChurch: 'Drawing of St. Michael’s Church in Siegen',
       brandSub: 'CATHOLIC SIEGEN', brandAria: 'Come & See, back to top',
@@ -75,6 +82,13 @@
       evEyebrow: 'Events & trips', evTitle: 'What’s coming up', evLead: 'Besides our gathering after Mass, we regularly go out and about together.',
       evEmptyT: 'New dates are announced via WhatsApp', evEmptyP: 'We announce current gatherings and trips in our WhatsApp community. Join us so you don’t miss anything.',
       evEmptyBtn: 'To the community', evDefault: 'Event',
+      calOpen: 'Open in Google Calendar', calSub: 'Subscribe to calendar', calLoading: 'Loading events …', calLoadingP: 'One moment please.',
+      calAllDay: 'all day', calUntil: 'until', calClock: '', calMore: 'You can find further dates in our Google Calendar.',
+      prEyebrow: 'Press & media', prTitle: 'What others write about us', prLead: '', prNote: 'The linked pages are in German.', prRead: 'Read more',
+      igEyebrow: 'Instagram', igTitle: 'Our everyday life on Instagram',
+      igLead: 'Impressions from our community: from Sundays, trips and special moments.',
+      igName: 'Come & See Siegen', igCardP: 'Follow us so you don’t miss anything. On Instagram we share photos and news from our community.',
+      igProfileBtn: 'Open profile on Instagram', igAvatarAlt: 'Logo of Come & See Siegen', igPostAlt: 'Come & See post on Instagram', igPostOpen: 'Open post on Instagram',
       galEyebrow: 'Gallery', galTitle: 'Impressions from our community', galLead: 'Moments from our Sundays, trips and activities together.',
       galPh: ['After Mass', 'Out and about', 'In faith'], galSoon: 'Photos coming soon', galEnlarge: 'Enlarge photo', galAlt: 'Photo of Come & See',
       joinEyebrow: 'Join in', joinTitle: 'Become part of the community', joinLead: 'Scan a code with your phone’s camera or tap the button. We look forward to meeting you.',
@@ -344,7 +358,8 @@ const QR = (() => {
     hero: { lead: '' },
     meeting: { when: '', mass: '', place: '', street: '', city: '', spot: '' },
     about: { title: '', text: '', image: '', caption: '' },
-    pillars: [], sunday: [], events: [], gallery: [], faq: [], footer: { contact: '' }
+    pillars: [], sunday: [], events: [], gallery: [], press: [], faq: [], footer: { contact: '' },
+    instagram: { posts: [] }
   };
   function merge(base, over) {
     if (Array.isArray(base)) return Array.isArray(over) ? over : base;
@@ -486,23 +501,87 @@ const QR = (() => {
     var mon = d ? d.toLocaleDateString(T.locale, { month: 'short' }).replace('.', '') : '';
     var wd = d ? d.toLocaleDateString(T.locale, { weekday: 'long' }) : '';
     var meta = [];
-    if (wd || e.time) meta.push('<span>' + icon('clock') + esc([wd, e.time].filter(Boolean).join(', ')) + '</span>');
+    var until = e.endDate && /^\d{4}-\d{2}-\d{2}$/.test(e.endDate)
+      ? ' ' + T.calUntil + ' ' + new Date(e.endDate + 'T12:00:00').toLocaleDateString(T.locale, { weekday: 'long', day: 'numeric', month: 'long' }) + (e.endTime ? ', ' + e.endTime : '') : '';
+    if (wd || e.time) meta.push('<span>' + icon('clock') + esc([wd, e.time].filter(Boolean).join(', ') + until) + '</span>');
     if (e.place) meta.push('<span>' + icon('pin') + esc(e.place) + '</span>');
     return '<article class="event' + (past ? ' past' : '') + '"><div class="event-date"><b>' + day + '</b><span>' + esc(mon) + '</span></div>' +
       '<div class="event-body"><h3>' + esc(e.title || T.evDefault) + '</h3>' + (meta.length ? '<div class="event-meta">' + meta.join('') + '</div>' : '') +
       (e.note ? '<p class="event-note">' + esc(e.note) + '</p>' : '') + '</div></article>';
   }
+  /* ---- Google Kalender: Termine kommen von /api/events (Funktion in _worker.js), nie direkt von Google ---- */
+  var TZ = 'Europe/Berlin';
+  var cal = { state: 'idle', events: [] };
+  function calCfg() {
+    var c = LINKS.calendar || {}, id = String(c.id || '').trim(), api = String(c.api || '').trim();
+    return { id: /^[^\s@]+@[^\s@]+$/.test(id) ? id : '', api: /^\/[A-Za-z0-9_\-\/]*$/.test(api) ? api : '' };
+  }
+  function calLinks() {
+    var id = calCfg().id; if (!id) return null;
+    return {
+      open: 'https://calendar.google.com/calendar/embed?src=' + encodeURIComponent(id) + '&ctz=' + encodeURIComponent(TZ) + '&hl=' + LANG,
+      sub: 'https://calendar.google.com/calendar/r?cid=' + btoa(id).replace(/=+$/, '')
+    };
+  }
+  function ymdIn(d) { return new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(d); }
+  function hmIn(d) { return new Intl.DateTimeFormat(T.locale, { timeZone: TZ, hour: LANG === 'en' ? 'numeric' : '2-digit', minute: '2-digit', hour12: LANG === 'en' }).format(d); }
+  function addDays(ymd, n) { var d = new Date(ymd + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); }
+  function fromCal(x) {
+    try {
+      if (!x || !x.start) return null;
+      var out = { date: '', time: '', endDate: '', sort: String(x.start), title: String(x.title || ''), place: String(x.place || ''), note: String(x.note || '') };
+      if (x.allDay) {
+        out.date = String(x.start).slice(0, 10);
+        var last = x.end ? addDays(String(x.end).slice(0, 10), -1) : out.date;
+        if (last > out.date) out.endDate = last; else out.time = T.calAllDay;
+      } else {
+        var s = new Date(x.start), e = x.end ? new Date(x.end) : null;
+        if (isNaN(s.getTime())) return null;
+        out.date = ymdIn(s); out.time = hmIn(s) + T.calClock;
+        if (e && !isNaN(e.getTime()) && e > s) {
+          var endDay = ymdIn(new Date(e.getTime() - 60000));   // Ende exakt um Mitternacht gehört noch zum Vortag
+          if (endDay === out.date) out.time = hmIn(s) + ' – ' + hmIn(e) + T.calClock;
+          else { out.endDate = endDay; out.endTime = hmIn(e) + T.calClock; }
+        }
+      }
+      return out.date ? out : null;
+    } catch (err) { return null; }
+  }
+  function refreshEvents() {
+    var el = document.getElementById('events'); if (!el) return;
+    el.outerHTML = eventsHTML(state);
+  }
+  function loadCalendar() {
+    var C = calCfg(); if (!C.api || !window.fetch) { cal.state = 'idle'; return; }
+    var ctl = window.AbortController ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctl) ctl.abort(); }, 9000);
+    fetch(C.api, { headers: { Accept: 'application/json' }, credentials: 'omit', signal: ctl ? ctl.signal : undefined })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (j) { cal.events = (j && Array.isArray(j.events) ? j.events : []).map(fromCal).filter(Boolean); cal.state = 'ok'; })
+      .catch(function () { cal.state = 'error'; cal.events = []; })
+      .then(function () { clearTimeout(timer); refreshEvents(); });
+  }
+  cal.state = calCfg().api ? 'loading' : 'idle';
+
   function eventsHTML(s) {
-    var t = today();
-    var list = s.events.filter(function (e) { return e.title || e.date; }).slice()
-      .sort(function (a, b) { return (a.date || '9999').localeCompare(b.date || '9999'); });
-    var shown = list.filter(function (e) { return !e.date || e.date >= t; });
+    var t = today(), CL = calLinks(), CAP = 12;
+    var list = s.events.filter(function (e) { return e.title || e.date; }).concat(cal.events).slice()
+      .sort(function (a, b) { return ((a.date || '9999') + (a.sort || a.time || '')).localeCompare((b.date || '9999') + (b.sort || b.time || '')); });
+    var shown = list.filter(function (e) { return !e.date || (e.endDate || e.date) >= t; });
+    var more = shown.length > CAP; shown = shown.slice(0, CAP);
     var body = shown.length
       ? '<div class="events">' + shown.map(function (e) { return eventCard(e, false); }).join('') + '</div>'
-      : '<div class="empty frame">' + icon('calendar', 'ic') + '<div><h3>' + T.evEmptyT + '</h3><p>' + T.evEmptyP + '</p></div>' + waBtn('btn-red', T.evEmptyBtn) + '</div>';
+      : (cal.state === 'loading'
+        ? '<div class="empty frame cal-loading" role="status">' + icon('calendar', 'ic') + '<div><h3>' + T.calLoading + '</h3><p>' + T.calLoadingP + '</p></div></div>'
+        : '<div class="empty frame">' + icon('calendar', 'ic') + '<div><h3>' + T.evEmptyT + '</h3><p>' + T.evEmptyP + '</p></div>' + waBtn('btn-red', T.evEmptyBtn) + '</div>');
+    var actions = CL
+      ? '<div class="cal-actions">' + (more ? '<p class="muted">' + T.calMore + '</p>' : '') +
+        '<div class="cal-buttons"><a class="btn btn-red" href="' + esc(CL.open) + '" target="_blank" rel="noopener noreferrer">' + icon('calendar') + '<span>' + T.calOpen + '</span></a>' +
+        '<a class="btn btn-line" href="' + esc(CL.sub) + '" target="_blank" rel="noopener noreferrer"><span>' + T.calSub + '</span></a></div></div>'
+      : '';
     return '<section class="sec" id="events" aria-labelledby="ev-t"><div class="wrap">' +
       '<div class="sec-head"><p class="eyebrow">' + esc(T.evEyebrow) + '</p><h2 class="h2" id="ev-t">' + T.evTitle + '</h2>' +
-      '<p class="lead">' + T.evLead + '</p></div>' + body + '</div></section>';
+      '<p class="lead">' + T.evLead + '</p></div>' + body + actions + '</div></section>';
   }
 
   function galleryItems(s) {
@@ -521,6 +600,51 @@ const QR = (() => {
     return '<section class="sec sec-2" id="gallery" aria-labelledby="gal-t"><div class="wrap">' +
       '<div class="sec-head"><p class="eyebrow">' + T.galEyebrow + '</p><h2 class="h2" id="gal-t">' + T.galTitle + '</h2>' +
       '<p class="lead">' + T.galLead + '</p></div>' + body + '</div></section>';
+  }
+
+  /* ---- Presse & Medien: Links zu Berichten über die Gemeinschaft (state.press), ersetzt die Galerie ---- */
+  function pressHTML(s) {
+    var items = (s.press || []).map(function (x) {
+      var u = String((x && x.url) || '');
+      return /^https:\/\//i.test(u) && x.title ? { url: u, title: x.title } : null;
+    }).filter(Boolean);
+    if (!items.length) return '';
+    var rows = items.map(function (x) {
+      return '<li><a class="press-link" href="' + esc(x.url) + '" target="_blank" rel="noopener noreferrer"><span>' + esc(x.title) + '</span><span class="press-arrow" aria-hidden="true">↗</span></a></li>';
+    }).join('');
+    var lead = ((T.prLead || '') + ' ' + (T.prNote || '')).trim();
+    return '<section class="sec" id="press" aria-labelledby="pr-t"><div class="wrap">' +
+      '<div class="sec-head"><p class="eyebrow">' + T.prEyebrow + '</p><h2 class="h2" id="pr-t">' + T.prTitle + '</h2>' +
+      (lead ? '<p class="lead">' + lead + '</p>' : '') + '</div><ul class="press-list">' + rows + '</ul></div></section>';
+  }
+
+  /* ---- Instagram: Profil-Karte + optional selbst gepflegte Beitragsbilder (state.instagram.posts) ---- */
+  function igPostUrl(u) {
+    var m = String(u || '').match(/^https:\/\/(?:www\.)?instagram\.com\/(?:[A-Za-z0-9_.]+\/)?((?:p|reel|tv)\/[A-Za-z0-9_-]+)/i);
+    return m ? 'https://www.instagram.com/' + m[1] + '/' : '';
+  }
+  function instaHTML(s) {
+    var L = linkInfo(); if (!L.ig) return '';
+    var posts = ((s.instagram && s.instagram.posts) || []).map(function (p) {
+      return { src: imgSrc(p && p.src), url: igPostUrl(p && p.url) || L.ig.url, caption: (p && p.caption) || '', alt: (p && p.alt) || '' };
+    }).filter(function (p) { return p.src; }).slice(0, 6);
+    var grid = posts.length
+      ? '<div class="ig-posts">' + posts.map(function (p) {
+          return '<a class="ig-post" href="' + esc(p.url) + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(T.igPostOpen + (p.alt || p.caption ? ': ' + (p.alt || p.caption) : '')) + '">' +
+            '<img src="' + esc(p.src) + '" alt="' + esc(p.alt || p.caption || T.igPostAlt) + '" loading="lazy">' +
+            (p.caption ? '<span class="g-cap">' + esc(p.caption) + '</span>' : '') + '</a>';
+        }).join('') + '</div>'
+      : '';
+    return '<section class="sec" id="instagram" aria-labelledby="ig-t"><div class="wrap">' +
+      '<div class="sec-head"><p class="eyebrow">' + T.igEyebrow + '</p><h2 class="h2" id="ig-t">' + T.igTitle + '</h2>' +
+      '<p class="lead">' + T.igLead + '</p></div>' +
+      '<div class="ig-grid' + (grid ? ' has-posts' : '') + '">' +
+      '<article class="ig-card frame"><div class="ig-head">' +
+      '<img class="ig-avatar" src="' + esc(ROOT + 'assets/images/logo-avatar.jpg') + '" alt="' + esc(T.igAvatarAlt) + '" width="96" height="96" loading="lazy">' +
+      '<div><h3>' + esc(T.igName) + '</h3><a class="ig-handle" href="' + esc(L.ig.url) + '" target="_blank" rel="noopener noreferrer">@' + esc(L.ig.handle) + '</a></div></div>' +
+      '<p>' + T.igCardP + '</p>' +
+      '<div class="ig-cta">' + igBtn('btn-red', T.igProfileBtn) + '</div></article>' +
+      grid + '</div></div></section>';
   }
 
   function joinHTML() {
@@ -577,7 +701,8 @@ const QR = (() => {
       '<p>' + T.footAbout + esc(s.meeting.when) + (s.meeting.place ? T.sunIn + esc(s.meeting.place) : '') + '.</p></div>' +
       '<div><h4>' + T.footPage + '</h4><nav aria-label="' + T.footAria + '">' + T.nav.map(function (n) { return '<a href="#' + n[0] + '" data-go="' + n[0] + '">' + n[1] + '</a>'; }).join('') + '</nav></div>' +
       '<div><h4>' + T.footContact + '</h4><nav aria-label="' + T.contactAria + '">' + (contact.join('') || '<span>' + T.footContactFallback + '</span>') + '</nav>' +
-      (s.footer.contact ? '<p class="foot-contact">' + esc(s.footer.contact) + '</p>' : '') + '</div>' +
+      (s.footer.contact ? '<p class="foot-contact">' + (/^[^\s@<>"]+@[^\s@<>"]+\.[A-Za-z]{2,}$/.test(s.footer.contact)
+        ? '<a href="mailto:' + esc(s.footer.contact) + '">' + esc(s.footer.contact) + '</a>' : esc(s.footer.contact)) + '</p>' : '') + '</div>' +
       '</div><div class="foot-bottom"><span>© ' + new Date().getFullYear() + ' ' + T.copyright + '</span><span class="foot-legal">' +
       T.legal.map(function (l) { return '<a href="' + l[1] + '">' + l[0] + '</a>'; }).join('') + '</span></div></div></footer>';
   }
@@ -596,7 +721,7 @@ const QR = (() => {
   function renderPage() {
     var s = state;
     var y = window.scrollY;
-    app.innerHTML = navHTML() + '<main>' + heroHTML(s) + aboutHTML(s) + sundayHTML(s) + eventsHTML(s) + galleryHTML(s) + joinHTML() + faqHTML(s) + locHTML(s) + '</main>' + footHTML(s);
+    app.innerHTML = navHTML() + '<main>' + heroHTML(s) + aboutHTML(s) + sundayHTML(s) + eventsHTML(s) + instaHTML(s) + joinHTML() + faqHTML(s) + locHTML(s) + pressHTML(s) + '</main>' + footHTML(s);
     if (Math.abs(window.scrollY - y) > 2) window.scrollTo(0, y);
     renderFloat();
     onScroll();
@@ -710,4 +835,5 @@ const QR = (() => {
   });
 
   renderPage();
+  loadCalendar();
 })();
