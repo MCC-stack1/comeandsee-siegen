@@ -1,0 +1,13 @@
+{
+  // WICHTIG: "name" muss genau so heißen wie der Worker in Cloudflare
+  // (Cloudflare → Workers & Pages → oben auf der Seite des Workers).
+  "name": "comeandsee-siegen",
+  "main": "worker/index.js",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    // Der Worker-Code läuft nur für /api/*. Alles andere liefert Cloudflare direkt aus ./public.
+    "run_worker_first": ["/api/*"]
+  }
+}
