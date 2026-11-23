@@ -509,7 +509,7 @@ const QR = (() => {
       '<div class="event-body"><h3>' + esc(e.title || T.evDefault) + '</h3>' + (meta.length ? '<div class="event-meta">' + meta.join('') + '</div>' : '') +
       (e.note ? '<p class="event-note">' + esc(e.note) + '</p>' : '') + '</div></article>';
   }
-  /* ---- Google Kalender: Termine kommen von /api/events (Funktion in worker/index.js), nie direkt von Google ---- */
+  /* ---- Google Kalender: Termine kommen von /api/events (Funktion in _worker.js), nie direkt von Google ---- */
   var TZ = 'Europe/Berlin';
   var cal = { state: 'idle', events: [] };
   function calCfg() {
