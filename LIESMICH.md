@@ -6,7 +6,8 @@ Keine Cookies, kein Tracking, keine Verbindung des Besucher-Browsers zu Google o
 ## Ordner
 
 ```
-index.html                 Sprachauswahl (Deutsch / English)  → comeandsee-siegen.com
+(Alle Seiten-Dateien liegen im Ordner public/; der Termin-Code in worker/index.js; Einstellungen in wrangler.jsonc)
+public/index.html                 Sprachauswahl (Deutsch / English)  → comeandsee-siegen.com
 de/index.html              Startseite Deutsch                 → /de/
 de/impressum.html          Impressum          de/datenschutz.html     Datenschutz
 en/index.html              Startseite Englisch                → /en/
@@ -15,8 +16,6 @@ assets/links.js            WhatsApp, Instagram, Google Kalender (gilt für beide
 assets/images/             Bilder (logo, michael.png, Favicon, Vorschaubild für WhatsApp …)
 assets/fonts/              Schriftdateien (siehe LIESMICH.txt dort)
 assets/style.css, app.js   Design und Seitenlogik (normalerweise nicht anfassen)
-_worker.js                 Holt die Termine aus dem Google Kalender (läuft bei Cloudflare)
-_routes.json               Sorgt dafür, dass _worker.js nur für /api/* läuft
 _headers                   Sicherheits-Header
 _redirects                 Alte Adressen /impressum und /datenschutz leiten auf /de/ um
 ```
